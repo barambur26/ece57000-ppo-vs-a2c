@@ -10,9 +10,9 @@ Reproduces the core stability claim from Schulman et al. (2017), *Proximal Polic
 | Algorithm | Mean Final Reward | Std | Min | Max |
 |-----------|:-----------------:|:---:|:---:|:---:|
 | PPO       | 500.0             | 0.0 | 500.0 | 500.0 |
-| A2C       | 488.0             | 24.0 | 440.1 | 500.0 |
+| A2C       | 343.8             | 198.2 | 27.7 | 500.0 |
 
-PPO converges to the maximum CartPole reward on every seed with zero variance. A2C reaches 500 on 4 of 5 seeds but collapses on seed 0, confirming that instability is a reproducible property of the unclipped update rule.
+PPO converges to the maximum CartPole reward on every seed with zero variance. A2C reaches 500 on only 3 of 5 seeds, collapsing to 191.3 on seed 0 and near-zero (27.7) on seed 1, confirming that instability is a reproducible property of the unclipped update rule.
 
 ---
 
